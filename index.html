@@ -1,122 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LWS Creations | Creative World</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description"
+        content="LWS Creations is a creative portfolio showcasing projects, stories, and goals by Lemar Woods.">
+    <title>Home | LWS Creations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body> <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header>
-        <nav aria-label="Main navigation"> <a href="./index.html">Home</a> <a href="./projects.html">Projects</a> <a
-                href="./about.html">About Me</a> </nav>
-    </header>
-    <main id="main-content">
-        <section class="hero" aria-labelledby="main-content-title">
-            <div class="hero-content">
-                <p class="tagline">Creative stories, coloring books, and comic ideas</p>
-                <h1 id="main-content-title">Welcome to my creative world</h1>
-                <p> I am Lemar Woods, a young creator who loves building projects around art, storytelling, and
-                    technology. This site is a place to share my journey and the ideas that inspire me. </p>
-                <div class="hero-actions"> <a class="btn" href="./projects.html">Explore my projects</a> <a class="btn"
-                        href="./about.html">Learn more about me</a> </div>
-            </div> <img src="./assets/images/Lemars_Life_Story_Cover_Page.png"
-                alt="Cover image for Lemar's Life Story coloring book featuring a creative storybook design"
-                loading="lazy" decoding="async">
-        </section>
-        <section class="content-grid" aria-labelledby="featured-content-title">
-            <h2 id="featured-content-title">Explore My Work</h2>
-            <article class="card">
-                <h3>My Projects</h3>
-                <p> I create coloring books, comic ideas, and future design projects that reflect my creativity. </p> <a
-                    class="btn" href="./projects.html"> View my projects </a>
-            </article>
-            <article class="card">
-                <h3>About Me</h3>
-                <p> I am passionate about storytelling, creativity, and using my work to inspire others. </p> <a
-                    class="btn" href="./about.html"> Read more about me </a>
-            </article>
-            <article class="card">
-                <h3>Inspiration</h3>
-                <p> My work is inspired by powerful stories, strong communities, and the idea of making a difference.
-                </p> <a class="btn" href="./projects.html"> See my projects </a>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 LWS Creations | Created by Lemar Woods</p>
-    </footer>
+<body>
+    <a class="skip-link" href="#main-content-title">Skip to main content</a>
+    <div class="page">
+        <header class="site-header">
+            <a class="site-brand" href="./" aria-label="LWS Creations home">LWS Creations</a>
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="./" class="nav-box" aria-current="page">Home</a>
+                <a href="./projects.html" class="nav-box">Projects</a>
+                <a href="./about.html" class="nav-box">About</a>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section class="hero" aria-labelledby="main-content-title">
+                <div class="hero-content">
+                    <p class="tagline">Creative stories, coloring books, and comic ideas</p>
+                    <h1 id="main-content-title">Welcome to my creative world</h1>
+                    <p>
+                        I am Lemar Woods, a young creator who loves building projects around art, storytelling,
+                        and technology. This site is a place to share my journey and the ideas that inspire me.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn" href="./projects.html">Explore my projects</a>
+                        <a class="btn" href="./about.html">Learn more about me</a>
+                    </div>
+                </div>
+                <img src="./assets/images/Lemars_Life_Story_Cover_Page.png"
+                    alt="Cover image for Lemar's Life Story coloring book featuring a creative storybook design"
+                    loading="lazy" decoding="async">
+            </section>
+
+            <section class="content-grid">
+                <article class="card">
+                    <h3>My Projects</h3>
+                    <p>
+                        I create coloring books, comic ideas, and future design projects that reflect my creativity.
+                    </p>
+                    <a class="btn" href="./projects.html">View my projects</a>
+                </article>
+
+                <article class="card">
+                    <h3>About Me</h3>
+                    <p>
+                        I am passionate about storytelling, creativity, and using my work to inspire others.
+                    </p>
+                    <a class="btn" href="./about.html">Read more about me</a>
+                </article>
+
+                <article class="card">
+                    <h3>Inspiration</h3>
+                    <p>
+                        My work is inspired by powerful stories, strong communities, and the idea of making a
+                        difference.
+                    </p>
+                    <a class="btn" href="./projects.html">See my projects</a>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 LWS Creations | Created by Lemar Woods</p>
+        </footer>
+    </div>
 </body>
 
 </html>
-
-.skip-link {
-position: absolute;
-top: -100px;
-left: 1rem ;
-padding: 0.75rem 1rem;
-background: #000;
-color: #fff;
-text-decoration: none;
-z-index: 1000;
-}
-.skip-link:focus {
-top:1rem;
-}
-.hero-content {
-display: flex;
-flex-direction: column;
-gap: 1rem;
-}
-.hero-actions{
-display: flex;
-gap: 1rem;
-margin-top: 0.5rem;
-}
-.content-grid{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
-gap: 2rem;
-margin-top: 3rem;
-}
-.content-grid h2{
-grid-column: 1/-1;
-margin-bottom: 0;
-}
-.card{
-padding: 2rem;
-border: 2px solid #001f3f;
-border-radius: 12px;
-background-color: #ffffff;
-display: flex;
-flex-direction: column;
-gap: 1rem;
-}
-.card h3 {
-margin-top: 0;
-}
-.card p {
-margin: 0;
-line-height: 1.6;
-}
-.card .btn {
-align-self: flex-start;
-}
-.btn {
-display: inline-block;
-padding: 0.75rem 1.25rem;
-border-radius: 8px;
-text-decoration: none;
-font-weight: bold;
-}
-.@media (max-width: 768px) {
-.content-grid {
-grid-template-columns: 1fr;
-}
-}
-.hero-actionsc{
-flex-direction: column;
-align-items: flex-start;
-}
