@@ -49,7 +49,8 @@
                 </div>
             </section>
 
-            <section class="about-grid">
+            <section class="about-grid" aria-labelledby="story-heading">
+                <h2 id="story-heading">My Story</h2>
                 <article class="about-card">
                     <h3>About Me</h3>
                     <p>
@@ -84,7 +85,8 @@
                 </article>
             </section>
 
-            <section class="about-grid">
+            <section class="about-grid" aria-labelledby="connect-section-heading">
+                <h2 id="connect-section-heading">Get in Touch</h2>
                 <article class="about-card">
                     <form class="about-form" action="#" method="post" aria-labelledby="connect-title">
                         <fieldset class="about-fieldset">
@@ -117,7 +119,8 @@
                                     class="about-input" aria-describedby="form-help" required>
                             </div>
                             <div class="about-actions">
-                                <a class="btn" href="./projects.html">View my projects</a>
+                                <button type="submit" class="btn">Send message</button>
+                                <a class="btn btn--secondary" href="./projects.html">View my projects</a>
                             </div>
                         </fieldset>
                     </form>
