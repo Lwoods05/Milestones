@@ -376,6 +376,12 @@ main {
     margin-top: 0.75rem;
 }
 
+.error-message {
+    color: #c0392b;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+}
+
 footer {
     background-color: var(--navy);
     color: var(--white);
