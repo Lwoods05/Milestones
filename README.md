@@ -2,7 +2,7 @@
 
 A three-page creative portfolio website built by **Lemar Woods**, showcasing projects, stories, and goals.
 
-**Live site:** https://lwoods05.github.io/Milestones/
+🌐 **Live Site:** [lwoods05.github.io/Milestones](https://lwoods05.github.io/Milestones/)
 
 ---
 
@@ -10,53 +10,44 @@ A three-page creative portfolio website built by **Lemar Woods**, showcasing pro
 
 | Page | Description |
 |------|-------------|
-| `index.html` | Homepage with hero section and project cards |
-| `projects.html` | Portfolio page showcasing creative work |
-| `about.html` | Bio, story sections, and contact form |
-
-## Project Structure
-
-```
-Milestones/
-├── index.html
-├── projects.html
-├── about.html
-└── assets/
-    ├── css/
-    │   └── style.css
-    └── images/
-        ├── Lemars_Life_Story_Cover_Page.png
-        └── black_super_heroes.jpg
-```
-
-## Technologies Used
-
-- HTML5 (semantic elements: `header`, `nav`, `main`, `section`, `article`, `footer`)
-- CSS3 (Flexbox, CSS Grid, custom properties, responsive `@media` breakpoints)
-- Google Fonts (Pacifico, Quicksand)
-
-## Accessibility
-
-This site is built to WCAG AA standards and passes the [WAVE accessibility checker](https://wave.webaim.org/) with:
-
-- ✅ 0 Errors
-- ✅ 0 Contrast Errors
-- ✅ AIM Score: 10 / 10
-
-Key accessibility features:
-- Skip link for keyboard navigation
-- Semantic heading hierarchy (h1 → h2 → h3)
-- ARIA labels on navigation and sections
-- `lang` attribute on all pages
-- Alt text on all images
-- Accessible contact form with per-field error messages
-
-## Design Principles Applied
-
-- **Proximity** — related content grouped with consistent spacing
-- **Similarity** — matching card styles signal equal importance
-- **Responsive** — layout adapts at 768px and 1200px breakpoints
+| [Home](index.html) | Hero section with intro and navigation cards |
+| [Projects](projects.html) | Coloring books, comic ideas, and future projects |
+| [About](about.html) | Personal bio, story, and contact form |
 
 ---
 
-*Created by Lemar Woods — LWS Creations © 2026*
+## Features
+
+- Responsive layout using CSS Flexbox and Grid
+- Custom CSS variables for consistent color theming (navy `#0d1b2a`, gold `#5a2f00`)
+- Google Fonts: Pacifico and Quicksand
+- Gestalt design principles (proximity and similarity) applied to card layouts
+- Fully accessible — passes [WAVE](https://wave.webaim.org/) with **0 errors, 0 contrast errors, AIM Score 10/10**
+
+## Accessibility
+
+- Semantic HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`)
+- Skip navigation link for keyboard users
+- Proper heading hierarchy (h1 → h2 → h3, no skipped levels)
+- ARIA labels on navigation, sections, and interactive elements
+- `lang` attribute and `dir` attribute on `<html>`
+- All images have descriptive `alt` text
+- WCAG AA color contrast compliant
+
+## File Structure
+
+```
+Milestones/
+├── index.html          # Home page
+├── projects.html       # Projects page
+├── about.html          # About page
+└── assets/
+    ├── css/
+    │   └── style.css   # Main stylesheet
+    └── images/
+        └── Lemars_Life_Story_Cover_Page.png
+```
+
+---
+
+*Created by Lemar Woods — 2026*
