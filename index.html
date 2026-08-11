@@ -70,6 +70,56 @@
                     <a class="btn" href="./about.html#story-heading">Learn about my story</a>
                 </article>
             </section>
+
+            <section class="content-grid home-connect" aria-labelledby="connect-heading">
+                <h2 id="connect-heading">Stay Connected</h2>
+                <article class="card home-connect__card">
+                    <form class="about-form" action="#" method="post" novalidate>
+                        <fieldset class="about-fieldset">
+                            <legend>Send a Quick Message</legend>
+                            <p class="about-help-text">Tell me what inspires you and what you want to explore next.</p>
+
+                            <div class="about-form-group">
+                                <label class="about-label" for="home-name">Name</label>
+                                <input type="text" id="home-name" name="name" placeholder="Enter your name" class="about-input"
+                                    aria-describedby="home-name-error" autocomplete="name" required>
+                                <p id="home-name-error" class="error-message" role="alert" hidden>Please enter your name.</p>
+                            </div>
+
+                            <div class="about-form-group">
+                                <label class="about-label" for="home-email">Email</label>
+                                <input type="email" id="home-email" name="email" placeholder="Enter your email"
+                                    class="about-input" aria-describedby="home-email-error" autocomplete="email" inputmode="email"
+                                    required>
+                                <p id="home-email-error" class="error-message" role="alert" hidden>Please enter a valid email address.</p>
+                            </div>
+
+                            <div class="about-form-group">
+                                <label class="about-label" for="home-section-select">Choose a section</label>
+                                <select id="home-section-select" name="section" class="about-input"
+                                    aria-describedby="home-section-error" required>
+                                    <option value="">Select one</option>
+                                    <option value="projects">Projects</option>
+                                    <option value="about">About</option>
+                                </select>
+                                <p id="home-section-error" class="error-message" role="alert" hidden>Please choose a section.</p>
+                            </div>
+
+                            <div class="about-form-group">
+                                <label class="about-label" for="home-interest">What are you interested in?</label>
+                                <input type="text" id="home-interest" name="interest" placeholder="Art, comics, tech..."
+                                    class="about-input" aria-describedby="home-interest-error" required>
+                                <p id="home-interest-error" class="error-message" role="alert" hidden>Please enter your interest.</p>
+                            </div>
+
+                            <div class="about-actions">
+                                <button type="submit" class="btn">Send message</button>
+                                <a class="btn btn--secondary" href="./projects.html">View my projects</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
         </main>
 
         <footer>

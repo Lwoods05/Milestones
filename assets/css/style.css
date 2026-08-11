@@ -382,6 +382,28 @@ main {
     margin: 0.25rem 0 0;
 }
 
+.home-connect {
+    margin-top: 1.25rem;
+}
+
+.home-connect__card {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #fff9f1 0%, #ffffff 100%);
+}
+
+.home-connect .about-fieldset {
+    background: linear-gradient(145deg, #ffffff 0%, #f7fbff 100%);
+    border-color: var(--gold);
+}
+
+.home-connect .about-help-text {
+    color: #20354a;
+}
+
+.home-connect .about-input {
+    border-width: 2px;
+}
+
 footer {
     background-color: var(--navy);
     color: var(--white);
