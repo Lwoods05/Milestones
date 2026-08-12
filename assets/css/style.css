@@ -3,6 +3,9 @@
 :root {
     --navy: #0d1b2a;
     --gold: #5a2f00;
+    --ink-strong: #102132;
+    --placeholder-ink: #3d4f63;
+    --danger: #8a1f17;
     --light: #fdfefe;
     --white: #ffffff;
     --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -120,6 +123,11 @@ a {
     transition: transform 0.2s ease, background-color 0.2s ease;
     font: inherit;
     cursor: pointer;
+}
+
+.nav-box[aria-current="page"] {
+    background-color: var(--navy);
+    color: var(--white);
 }
 
 .nav-box:hover,
@@ -345,7 +353,7 @@ main {
 
 .about-help-text {
     margin: 0 0 0.8rem;
-    color: var(--navy);
+    color: var(--ink-strong);
     font-size: 0.95rem;
 }
 
@@ -363,6 +371,11 @@ main {
     background-color: var(--white);
 }
 
+.about-input::placeholder {
+    color: var(--placeholder-ink);
+    opacity: 1;
+}
+
 .about-input:focus {
     outline: none;
     border-color: var(--gold);
@@ -377,7 +390,7 @@ main {
 }
 
 .error-message {
-    color: #c0392b;
+    color: var(--danger);
     font-size: 0.9rem;
     margin: 0.25rem 0 0;
 }
@@ -483,30 +496,4 @@ footer {
     .about-grid .about-card:last-child {
         grid-column: auto;
     }
-}
-/* Skip Link Accessibility */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #001f3f;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    z-index: 1000;
-    border-radius: 0 0 5px 0;
-    transition: top 0.3s ease;
-}
-
-.skip-link:focus {
-    top: 0;
-    outline: 3px solid #ffffff;
-}
-
-
-/* Keyboard Focus Accessibility */
-a:focus,
-button:focus {
-    outline: 3px solid #ffcc00;
-    outline-offset: 3px;
 }
