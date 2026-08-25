@@ -69,11 +69,14 @@ function initializeNavToggle() {
         const isOpen = nav.classList.toggle('is-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
         nav.setAttribute('aria-hidden', String(!isOpen));
+        navToggle.textContent = isOpen ? 'Close' : 'Menu';
+        navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Toggle navigation');
     });
 
     nav.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
     nav.setAttribute('aria-hidden', 'true');
+    navToggle.textContent = 'Menu';
 }
 
 function initializeReadMore() {
