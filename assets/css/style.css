@@ -164,6 +164,20 @@ a {
     margin-top: 0.75rem;
 }
 
+.toggle-highlight {
+    display: inline-block;
+    width: max-content;
+    padding: 0.7rem 1rem;
+    margin-top: 0.75rem;
+    border: 2px solid var(--navy);
+    border-radius: 999px;
+    background-color: var(--white);
+    color: var(--navy);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .nav-box {
     background-color: var(--white);
     color: var(--navy);

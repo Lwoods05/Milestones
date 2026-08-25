@@ -124,6 +124,21 @@ function initializeFeaturedCard() {
     }
 }
 
+function initializeToggleHighlight() {
+    const toggleButton = document.querySelector('.toggle-highlight');
+    const featuredCard = document.querySelector('.content-grid .card');
+
+    if (!toggleButton || !featuredCard) {
+        return;
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const isActive = featuredCard.classList.toggle('is-featured');
+        toggleButton.setAttribute('aria-pressed', String(isActive));
+        toggleButton.textContent = isActive ? 'Hide highlight' : 'Toggle highlight';
+    });
+}
+
 function validateField(field) {
     const errorId = `${field.id}-error`;
     const errorElement = document.getElementById(errorId);
@@ -206,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeNavToggle();
     initializeReadMore();
     initializeFeaturedCard();
+    initializeToggleHighlight();
     initializeCardSelectors();
     initializeForms();
 });
