@@ -105,6 +105,17 @@ function initializeReadMore() {
     });
 }
 
+function initializeCardSelectors() {
+    const cards = document.querySelectorAll('.card, .about-card');
+
+    cards.forEach((card) => {
+        card.addEventListener('click', () => {
+            cards.forEach((item) => item.classList.remove('is-selected'));
+            card.classList.add('is-selected');
+        });
+    });
+}
+
 function validateField(field) {
     const errorId = `${field.id}-error`;
     const errorElement = document.getElementById(errorId);
@@ -186,5 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
     initializeNavToggle();
     initializeReadMore();
+    initializeCardSelectors();
     initializeForms();
 });
