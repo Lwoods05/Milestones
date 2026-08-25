@@ -142,6 +142,24 @@ function initializeToggleHighlight() {
     });
 }
 
+function initializeBackToTop() {
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    if (!backToTopButton) {
+        return;
+    }
+
+    const scrollThreshold = 400;
+
+    window.addEventListener('scroll', () => {
+        backToTopButton.hidden = window.scrollY < scrollThreshold;
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 function validateField(field) {
     const errorId = `${field.id}-error`;
     const errorElement = document.getElementById(errorId);
@@ -226,5 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeFeaturedCard();
     initializeToggleHighlight();
     initializeCardSelectors();
+    initializeBackToTop();
     initializeForms();
 });
