@@ -116,6 +116,14 @@ function initializeCardSelectors() {
     });
 }
 
+function initializeFeaturedCard() {
+    const featuredCard = document.querySelector('.content-grid .card');
+
+    if (featuredCard) {
+        featuredCard.classList.add('is-featured');
+    }
+}
+
 function validateField(field) {
     const errorId = `${field.id}-error`;
     const errorElement = document.getElementById(errorId);
@@ -197,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
     initializeNavToggle();
     initializeReadMore();
+    initializeFeaturedCard();
     initializeCardSelectors();
     initializeForms();
 });

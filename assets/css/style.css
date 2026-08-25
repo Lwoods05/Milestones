@@ -307,7 +307,9 @@ main {
 }
 
 .card.is-selected,
-.about-card.is-selected {
+.about-card.is-selected,
+.card.is-featured,
+.about-card.is-featured {
     border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(90, 47, 0, 0.12), var(--shadow);
     transform: translateY(-2px);
