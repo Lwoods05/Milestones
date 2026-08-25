@@ -19,8 +19,14 @@
     <a class="skip-link" href="#main-content-title">Skip to main content</a>
     <div class="page">
         <header class="site-header">
-            <a class="site-brand" href="index.html">LWS Creations</a>
-            <nav class="top-nav" aria-label="Main navigation">
+            <div class="header-row">
+                <a class="site-brand" href="index.html">LWS Creations</a>
+                <div class="header-actions">
+                    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
+                    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+                </div>
+            </div>
+            <nav class="top-nav" aria-label="Main navigation" aria-hidden="true">
                 <a href="index.html" class="nav-box">Home</a>
                 <a href="projects.html" class="nav-box">Projects</a>
                 <a href="about.html" class="nav-box" aria-current="page">About</a>
@@ -48,6 +54,13 @@
                         <li>Inspired by superheroes and community</li>
                         <li>Enjoys creating projects that tell a story</li>
                     </ul>
+                    <button class="read-more-toggle" type="button" data-read-more-target="about-facts" aria-expanded="false">Read more</button>
+                    <div id="about-facts" class="read-more-content" hidden>
+                        <p>
+                            I am always learning how to blend creativity with practical digital skills so my ideas can
+                            grow into meaningful projects and experiences.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -137,7 +150,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2026 LWS Creations | Created by Lemar Woods</p>
+            <p>&copy; <span data-current-year></span> LWS Creations | Created by Lemar Woods</p>
         </footer>
     </div>
     <script src="./assets/js/site.js"></script>

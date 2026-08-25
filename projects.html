@@ -18,8 +18,14 @@
     <a class="skip-link" href="#main-content-title">Skip to main content</a>
     <div class="page">
         <header class="site-header">
-            <a class="site-brand" href="index.html">LWS Creations</a>
-            <nav class="top-nav" aria-label="Main navigation">
+            <div class="header-row">
+                <a class="site-brand" href="index.html">LWS Creations</a>
+                <div class="header-actions">
+                    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
+                    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+                </div>
+            </div>
+            <nav class="top-nav" aria-label="Main navigation" aria-hidden="true">
                 <a href="index.html" class="nav-box">Home</a>
                 <a href="projects.html" class="nav-box" aria-current="page">Projects</a>
                 <a href="about.html" class="nav-box">About</a>
@@ -88,6 +94,13 @@
                     <p>
                         A future comic project focused on bold characters, strong themes, and creative storytelling.
                     </p>
+                    <button class="read-more-toggle" type="button" data-read-more-target="comic-story" aria-expanded="false">Read more</button>
+                    <div id="comic-story" class="read-more-content" hidden>
+                        <p>
+                            I want this comic to capture emotion, identity, and imagination while inspiring others to
+                            see storytelling as a powerful way to connect with the world.
+                        </p>
+                    </div>
 
                 </article>
 
@@ -161,7 +174,7 @@
         <footer>
 
             <p>
-                &copy; 2026 LWS Creations | Created by Lemar Woods
+                &copy; <span data-current-year></span> LWS Creations | Created by Lemar Woods
             </p>
 
         </footer>

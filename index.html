@@ -19,8 +19,14 @@
     <a class="skip-link" href="#main-content-title">Skip to main content</a>
     <div class="page">
         <header class="site-header">
-            <span class="site-brand">LWS Creations</span>
-            <nav class="top-nav" aria-label="Main navigation">
+            <div class="header-row">
+                <span class="site-brand">LWS Creations</span>
+                <div class="header-actions">
+                    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
+                    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+                </div>
+            </div>
+            <nav class="top-nav" aria-label="Main navigation" aria-hidden="true">
                 <a href="index.html" class="nav-box" aria-current="page">Home</a>
                 <a href="projects.html" class="nav-box">Projects</a>
                 <a href="about.html" class="nav-box">About</a>
@@ -36,6 +42,13 @@
                         I am Lemar Woods, a young creator who loves building projects around art, storytelling,
                         and technology. This site is a place to share my journey and the ideas that inspire me.
                     </p>
+                    <button class="read-more-toggle" type="button" data-read-more-target="home-story" aria-expanded="false">Read more</button>
+                    <div id="home-story" class="read-more-content" hidden>
+                        <p>
+                            My work is driven by curiosity, community, and the belief that creativity can become a
+                            meaningful path for growth, purpose, and connection.
+                        </p>
+                    </div>
 
                 </div>
                 <img src="./assets/images/Lemars_Life_Story_Cover_Page.png"
@@ -127,7 +140,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2026 LWS Creations | Created by Lemar Woods</p>
+            <p>&copy; <span data-current-year></span> LWS Creations | Created by Lemar Woods</p>
         </footer>
     </div>
     <script src="./assets/js/site.js"></script>

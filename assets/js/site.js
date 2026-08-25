@@ -1,5 +1,110 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function setCopyrightYear() {
+    const yearElement = document.querySelector('[data-current-year]');
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+}
+
+function highlightActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-box');
+
+    navLinks.forEach((link) => {
+        const linkHref = link.getAttribute('href');
+        const isCurrentPage = linkHref === currentPage || (currentPage === '' && linkHref === 'index.html');
+
+        if (isCurrentPage) {
+            link.setAttribute('aria-current', 'page');
+            link.classList.add('is-active');
+        } else {
+            link.removeAttribute('aria-current');
+            link.classList.remove('is-active');
+        }
+    });
+}
+
+function setTheme(theme) {
+    const isDarkMode = theme === 'dark';
+    document.body.classList.toggle('dark-mode', isDarkMode);
+
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.setAttribute('aria-pressed', String(isDarkMode));
+        themeToggle.textContent = isDarkMode ? '☀️' : '🌙';
+        themeToggle.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+
+    localStorage.setItem('lws-theme', theme);
+}
+
+function initializeThemeToggle() {
+    const toggle = document.querySelector('.theme-toggle');
+    if (!toggle) {
+        return;
+    }
+
+    const savedTheme = localStorage.getItem('lws-theme');
+    const preferenceDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (preferenceDark ? 'dark' : 'light');
+    setTheme(initialTheme);
+
+    toggle.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+        setTheme(nextTheme);
+    });
+}
+
+function initializeNavToggle() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.top-nav');
+
+    if (!navToggle || !nav) {
+        return;
+    }
+
+    navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        nav.setAttribute('aria-hidden', String(!isOpen));
+    });
+
+    nav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    nav.setAttribute('aria-hidden', 'true');
+}
+
+function initializeReadMore() {
+    const readMoreButtons = document.querySelectorAll('[data-read-more-target]');
+
+    readMoreButtons.forEach((button) => {
+        const targetId = button.getAttribute('data-read-more-target');
+        const target = document.getElementById(targetId);
+
+        if (!target) {
+            return;
+        }
+
+        const updateState = () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            target.hidden = isExpanded;
+            button.textContent = isExpanded ? 'Read less' : 'Read more';
+        };
+
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            updateState();
+        });
+
+        button.setAttribute('aria-expanded', 'false');
+        target.hidden = true;
+        button.textContent = 'Read more';
+    });
+}
+
 function validateField(field) {
     const errorId = `${field.id}-error`;
     const errorElement = document.getElementById(errorId);
@@ -75,4 +180,11 @@ function initializeForms() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', initializeForms);
+document.addEventListener('DOMContentLoaded', () => {
+    setCopyrightYear();
+    highlightActiveNav();
+    initializeThemeToggle();
+    initializeNavToggle();
+    initializeReadMore();
+    initializeForms();
+});
