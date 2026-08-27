@@ -495,6 +495,80 @@ main {
     margin: 0.75rem 0 0;
 }
 
+.interactive-panel {
+    margin-top: 1.25rem;
+}
+
+.interactive-card {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.spark-idea-output {
+    margin: 0.75rem 0 0;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.mood-preview {
+    margin-top: 0.75rem;
+    padding: 0.85rem;
+    border: 2px dashed var(--navy);
+    border-radius: 12px;
+    color: var(--ink-strong);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.goal-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: flex-start;
+}
+
+.goal-form-row .about-input {
+    flex: 1 1 12rem;
+}
+
+.goal-list {
+    list-style: none;
+    margin: 0.85rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.goal-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background-color: var(--light);
+    border: 2px solid var(--navy);
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+}
+
+.goal-remove-btn {
+    background: none;
+    border: 2px solid var(--danger);
+    color: var(--danger);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.goal-remove-btn:hover,
+.goal-remove-btn:focus-visible {
+    background-color: var(--danger);
+    color: var(--white);
+    outline: none;
+}
+
 .home-connect {
     margin-top: 1.25rem;
 }

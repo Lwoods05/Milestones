@@ -141,6 +141,36 @@
                     </form>
                 </article>
             </section>
+
+            <section class="content-grid interactive-panel" aria-labelledby="interactive-heading">
+                <h2 id="interactive-heading">Try the Interactive Playground</h2>
+                <article class="card interactive-card">
+                    <h3>Spark an Idea</h3>
+                    <p>Click for a quick creative prompt to spark your next project.</p>
+                    <button type="button" class="btn spark-idea-btn">Get a creative spark</button>
+                    <p class="spark-idea-output" role="status">Click the button for inspiration!</p>
+                </article>
+
+                <article class="card interactive-card">
+                    <h3>Mood Color Preview</h3>
+                    <label class="about-label" for="mood-input">Type a mood word (calm, bold, playful, creative,
+                        focused)</label>
+                    <input type="text" id="mood-input" class="about-input" placeholder="e.g. calm, bold, playful"
+                        autocomplete="off">
+                    <div class="mood-preview" aria-live="polite">Your mood preview will update here as you type.</div>
+                </article>
+
+                <article class="card interactive-card">
+                    <h3>My Goals List</h3>
+                    <label class="about-label" for="goal-input">Add a creative goal</label>
+                    <div class="goal-form-row">
+                        <input type="text" id="goal-input" class="about-input" placeholder="e.g. Finish a comic page"
+                            autocomplete="off">
+                        <button type="button" class="btn goal-add-btn">Add goal</button>
+                    </div>
+                    <ul class="goal-list" aria-live="polite"></ul>
+                </article>
+            </section>
         </main>
 
         <footer>
@@ -149,6 +179,7 @@
         </footer>
     </div>
     <script src="./assets/js/site.js"></script>
+    <script src="./assets/js/interactive.js"></script>
 </body>
 
 </html>
