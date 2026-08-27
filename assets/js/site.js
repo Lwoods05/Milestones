@@ -197,9 +197,16 @@ function showSuccessState(form) {
     submitButton.textContent = 'Message sent!';
     submitButton.disabled = true;
 
+    const confirmationMessage = document.createElement('p');
+    confirmationMessage.className = 'form-success-message';
+    confirmationMessage.setAttribute('role', 'status');
+    confirmationMessage.textContent = 'Thanks! Your message has been sent.';
+    form.appendChild(confirmationMessage);
+
     window.setTimeout(() => {
         submitButton.textContent = originalText;
         submitButton.disabled = false;
+        confirmationMessage.remove();
     }, 2000);
 }
 
