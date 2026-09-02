@@ -327,11 +327,18 @@ main {
 }
 
 .card.is-selected,
-.about-card.is-selected,
-.card.is-featured,
-.about-card.is-featured {
+.about-card.is-selected {
     border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(90, 47, 0, 0.12), var(--shadow);
+    transform: translateY(-2px);
+}
+
+.card.is-featured,
+.about-card.is-featured {
+    background-color: #fff3c4;
+    border-color: var(--gold);
+    border-width: 4px;
+    box-shadow: 0 0 0 4px rgba(90, 47, 0, 0.35), var(--shadow);
     transform: translateY(-2px);
 }
 

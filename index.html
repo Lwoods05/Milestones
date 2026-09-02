@@ -44,8 +44,8 @@
                         I am Lemar Woods, a young creator who loves building projects around art, storytelling,
                         and technology. This site is a place to share my journey and the ideas that inspire me.
                     </p>
-                    <button class="read-more-toggle" type="button" data-read-more-target="home-story"
-                        aria-expanded="false">Read more</button>
+                    <button id="home-story-toggle" class="read-more-toggle" type="button" aria-expanded="false">Read
+                        more</button>
                     <div id="home-story" class="read-more-content" hidden>
                         <p>
                             My work is driven by curiosity, community, and the belief that creativity can become a
@@ -114,8 +114,8 @@
                             </div>
 
                             <div class="about-form-group">
-                                <label class="about-label" for="home-section-select">Choose a section</label>
-                                <select id="home-section-select" name="section" class="about-input"
+                                <label class="about-label" for="home-section">Choose a section</label>
+                                <select id="home-section" name="section" class="about-input"
                                     aria-describedby="home-section-error" required>
                                     <option value="">Select one</option>
                                     <option value="projects">Projects</option>
@@ -174,7 +174,7 @@
         </main>
 
         <footer>
-            <p>&copy; <span data-current-year></span> LWS Creations | Created by Lemar Woods</p>
+            <p>&copy; <span id="current-year"></span> LWS Creations | Created by Lemar Woods</p>
             <button class="back-to-top" type="button" aria-label="Back to top" hidden>Back to top ↑</button>
         </footer>
     </div>

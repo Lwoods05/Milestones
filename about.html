@@ -56,8 +56,8 @@
                         <li>Inspired by superheroes and community</li>
                         <li>Enjoys creating projects that tell a story</li>
                     </ul>
-                    <button class="read-more-toggle" type="button" data-read-more-target="about-facts"
-                        aria-expanded="false">Read more</button>
+                    <button id="about-facts-toggle" class="read-more-toggle" type="button" aria-expanded="false">Read
+                        more</button>
                     <div id="about-facts" class="read-more-content" hidden>
                         <p>
                             I am always learning how to blend creativity with practical digital skills so my ideas can
@@ -125,9 +125,9 @@
                                     address.</p>
                             </div>
                             <div class="about-form-group">
-                                <label class="about-label" for="section-select">Choose a section</label>
-                                <select id="section-select" name="section" class="about-input"
-                                    aria-describedby="section-error" required>
+                                <label class="about-label" for="section">Choose a section</label>
+                                <select id="section" name="section" class="about-input" aria-describedby="section-error"
+                                    required>
                                     <option value="">Select one</option>
                                     <option value="projects">Projects</option>
                                     <option value="about">About</option>
@@ -153,7 +153,7 @@
         </main>
 
         <footer>
-            <p>&copy; <span data-current-year></span> LWS Creations | Created by Lemar Woods</p>
+            <p>&copy; <span id="current-year"></span> LWS Creations | Created by Lemar Woods</p>
             <button class="back-to-top" type="button" aria-label="Back to top" hidden>Back to top ↑</button>
         </footer>
     </div>

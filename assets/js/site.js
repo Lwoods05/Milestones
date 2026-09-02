@@ -1,7 +1,7 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function setCopyrightYear() {
-    const yearElement = document.querySelector('[data-current-year]');
+    const yearElement = document.getElementById('current-year');
 
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
@@ -79,33 +79,32 @@ function initializeNavToggle() {
     navToggle.textContent = 'Menu';
 }
 
-function initializeReadMore() {
-    const readMoreButtons = document.querySelectorAll('[data-read-more-target]');
+function setupReadMoreToggle(buttonId, targetId) {
+    const button = document.getElementById(buttonId);
+    const target = document.getElementById(targetId);
 
-    readMoreButtons.forEach((button) => {
-        const targetId = button.getAttribute('data-read-more-target');
-        const target = document.getElementById(targetId);
+    if (!button || !target) {
+        return;
+    }
 
-        if (!target) {
-            return;
-        }
+    button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const willExpand = !isExpanded;
 
-        const updateState = () => {
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            target.hidden = isExpanded;
-            button.textContent = isExpanded ? 'Read less' : 'Read more';
-        };
-
-        button.addEventListener('click', () => {
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            button.setAttribute('aria-expanded', String(!isExpanded));
-            updateState();
-        });
-
-        button.setAttribute('aria-expanded', 'false');
-        target.hidden = true;
-        button.textContent = 'Read more';
+        button.setAttribute('aria-expanded', String(willExpand));
+        target.hidden = !willExpand;
+        button.textContent = willExpand ? 'Read less' : 'Read more';
     });
+
+    button.setAttribute('aria-expanded', 'false');
+    target.hidden = true;
+    button.textContent = 'Read more';
+}
+
+function initializeReadMore() {
+    setupReadMoreToggle('home-story-toggle', 'home-story');
+    setupReadMoreToggle('about-facts-toggle', 'about-facts');
+    setupReadMoreToggle('comic-story-toggle', 'comic-story');
 }
 
 function initializeCardSelectors() {
@@ -134,6 +133,10 @@ function initializeToggleHighlight() {
     if (!toggleButton || !featuredCard) {
         return;
     }
+
+    const isActiveOnLoad = featuredCard.classList.contains('is-featured');
+    toggleButton.setAttribute('aria-pressed', String(isActiveOnLoad));
+    toggleButton.textContent = isActiveOnLoad ? 'Hide highlight' : 'Toggle highlight';
 
     toggleButton.addEventListener('click', () => {
         const isActive = featuredCard.classList.toggle('is-featured');
