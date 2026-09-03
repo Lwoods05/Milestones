@@ -65,17 +65,29 @@ function initializeNavToggle() {
         return;
     }
 
+    const desktopQuery = window.matchMedia('(min-width: 768px)');
+
+    const syncNavVisibility = () => {
+        if (desktopQuery.matches) {
+            nav.removeAttribute('aria-hidden');
+        } else {
+            nav.setAttribute('aria-hidden', String(!nav.classList.contains('is-open')));
+        }
+    };
+
     navToggle.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('is-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
-        nav.setAttribute('aria-hidden', String(!isOpen));
+        syncNavVisibility();
         navToggle.textContent = isOpen ? 'Close' : 'Menu';
         navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Toggle navigation');
     });
 
+    desktopQuery.addEventListener('change', syncNavVisibility);
+
     nav.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
-    nav.setAttribute('aria-hidden', 'true');
+    syncNavVisibility();
     navToggle.textContent = 'Menu';
 }
 
@@ -105,17 +117,6 @@ function initializeReadMore() {
     setupReadMoreToggle('home-story-toggle', 'home-story');
     setupReadMoreToggle('about-facts-toggle', 'about-facts');
     setupReadMoreToggle('comic-story-toggle', 'comic-story');
-}
-
-function initializeCardSelectors() {
-    const cards = document.querySelectorAll('.card, .about-card');
-
-    cards.forEach((card) => {
-        card.addEventListener('click', () => {
-            cards.forEach((item) => item.classList.remove('is-selected'));
-            card.classList.add('is-selected');
-        });
-    });
 }
 
 function initializeFeaturedCard() {
@@ -253,7 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeReadMore();
     initializeFeaturedCard();
     initializeToggleHighlight();
-    initializeCardSelectors();
     initializeBackToTop();
     initializeForms();
 });
