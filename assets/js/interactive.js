@@ -6,13 +6,7 @@ const MOOD_STYLES = {
     focused: { background: '#d9f2e3', color: '#1e6b3a', label: 'Focused green' },
 };
 
-const IDEA_PROMPTS = [
-    'Sketch a superhero inspired by your favorite animal.',
-    'Write one page of a comic where the hero loses their power for a day.',
-    'Design a coloring page based on your favorite season.',
-    'Invent a sidekick character and describe their special skill.',
-    'Create a short story about a hidden door in an ordinary house.',
-];
+const IDEA_PROMPTS_URL = './assets/data/idea-prompts.json';
 
 function initializeIdeaSpark() {
     const sparkButton = document.querySelector('.spark-idea-btn');
@@ -24,15 +18,33 @@ function initializeIdeaSpark() {
 
     let lastIndex = -1;
 
-    sparkButton.addEventListener('click', () => {
-        let nextIndex = Math.floor(Math.random() * IDEA_PROMPTS.length);
+    const showRandomPrompt = (prompts) => {
+        let nextIndex = Math.floor(Math.random() * prompts.length);
 
-        while (nextIndex === lastIndex && IDEA_PROMPTS.length > 1) {
-            nextIndex = Math.floor(Math.random() * IDEA_PROMPTS.length);
+        while (nextIndex === lastIndex && prompts.length > 1) {
+            nextIndex = Math.floor(Math.random() * prompts.length);
         }
 
         lastIndex = nextIndex;
-        sparkOutput.textContent = IDEA_PROMPTS[nextIndex];
+        sparkOutput.textContent = prompts[nextIndex];
+    };
+
+    sparkButton.addEventListener('click', () => {
+        sparkOutput.textContent = 'Loading an idea...';
+
+        fetch(IDEA_PROMPTS_URL)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Request failed with status ${response.status}`);
+                }
+
+                return response.json();
+            })
+            .then((data) => showRandomPrompt(data.prompts))
+            .catch((error) => {
+                console.error('Could not load idea prompts:', error);
+                sparkOutput.textContent = 'Sorry, ideas are unavailable right now. Please try again later.';
+            });
     });
 }
 
