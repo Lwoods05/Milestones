@@ -6,7 +6,7 @@ const MOOD_STYLES = {
     focused: { background: '#d9f2e3', color: '#1e6b3a', label: 'Focused green' },
 };
 
-const IDEA_PROMPTS_URL = './assets/data/idea-prompts.json';
+const GITHUB_API_URL = 'https://api.github.com/users/Lwoods05';
 
 function initializeIdeaSpark() {
     const sparkButton = document.querySelector('.spark-idea-btn');
@@ -16,23 +16,10 @@ function initializeIdeaSpark() {
         return;
     }
 
-    let lastIndex = -1;
-
-    const showRandomPrompt = (prompts) => {
-        let nextIndex = Math.floor(Math.random() * prompts.length);
-
-        while (nextIndex === lastIndex && prompts.length > 1) {
-            nextIndex = Math.floor(Math.random() * prompts.length);
-        }
-
-        lastIndex = nextIndex;
-        sparkOutput.textContent = prompts[nextIndex];
-    };
-
     sparkButton.addEventListener('click', () => {
-        sparkOutput.textContent = 'Loading an idea...';
+        sparkOutput.textContent = 'Loading GitHub profile...';
 
-        fetch(IDEA_PROMPTS_URL)
+        fetch(GITHUB_API_URL)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`Request failed with status ${response.status}`);
@@ -40,10 +27,12 @@ function initializeIdeaSpark() {
 
                 return response.json();
             })
-            .then((data) => showRandomPrompt(data.prompts))
+            .then((data) => {
+                sparkOutput.textContent = `${data.login} has ${data.public_repos} public repos and ${data.followers} followers on GitHub!`;
+            })
             .catch((error) => {
-                console.error('Could not load idea prompts:', error);
-                sparkOutput.textContent = 'Sorry, ideas are unavailable right now. Please try again later.';
+                console.error('Could not load GitHub profile:', error);
+                sparkOutput.textContent = 'Sorry, GitHub info is unavailable right now. Please try again later.';
             });
     });
 }
