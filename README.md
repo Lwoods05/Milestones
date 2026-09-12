@@ -20,9 +20,14 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 
 - Responsive layouts built with CSS Grid and Flexbox for phone, tablet, and desktop screens.
 - A reusable design system using CSS custom properties for navy, gold, white, shadows, text, and form colors.
-- Shared navigation with a clear current-page indicator and a sticky header.
+- Light/dark mode toggle with the preference saved in `localStorage` so it persists between visits.
+- Shared navigation with a collapsible mobile menu, a clear current-page indicator, and a sticky header.
+- A "Toggle highlight" button on every page that lets readers turn a featured card's highlight on or off, with the choice remembered across pages.
+- Expandable "Read more" sections on the Home, Projects, and About pages for extra detail without cluttering the page.
 - A featured image for the *Lemar's Life Story* coloring-book project.
-- Contact-style forms on the Home and About pages, including name, email, section, and interest fields.
+- Contact-style forms on the Home and About pages with inline validation, error messages, and a confirmation state on submit.
+- A GitHub stats lookup and a mood-word color preview on the Home page.
+- A "Back to top" button that appears after scrolling.
 - Google Fonts: [Pacifico](https://fonts.google.com/specimen/Pacifico) for branding and [Quicksand](https://fonts.google.com/specimen/Quicksand) for readable body copy.
 - Focus, hover, and reduced-motion styles that make interaction clearer and more comfortable.
 
@@ -47,6 +52,7 @@ This is a lightweight static website. It uses:
 
 - HTML5
 - CSS3
+- Vanilla JavaScript (`assets/js/site.js` for shared site behavior, `assets/js/interactive.js` for Home page extras)
 - Google Fonts
 - GitHub Pages for deployment
 
@@ -74,8 +80,14 @@ Milestones/
 `-- assets/
     |-- css/
     |   `-- style.css                   # Shared layout, responsive, and accessibility styles
-    `-- images/
-        `-- Lemars_Life_Story_Cover_Page.png  # Coloring-book cover image
+    |-- data/
+    |   `-- idea-prompts.json           # Supporting content data
+    |-- images/
+    |   |-- Lemars_Life_Story_Cover_Page.png  # Coloring-book cover image
+    |   `-- black_super_heroes.jpg      # Comic-inspiration image
+    `-- js/
+        |-- site.js                     # Shared behavior: theme toggle, nav, forms, highlight toggle, back-to-top
+        `-- interactive.js               # Home page extras: GitHub stats lookup and mood-word preview
 ```
 
 ## Deployment

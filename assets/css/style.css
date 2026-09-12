@@ -328,10 +328,16 @@ main {
 .card.is-featured,
 .about-card.is-featured {
     background-color: #fff3c4;
+    color: #3d2400;
     border-color: var(--gold);
     border-width: 4px;
     box-shadow: 0 0 0 4px rgba(90, 47, 0, 0.35), var(--shadow);
     transform: translateY(-2px);
+}
+
+.card.is-featured h3,
+.about-card.is-featured h3 {
+    color: #3d2400;
 }
 
 .card h3 {

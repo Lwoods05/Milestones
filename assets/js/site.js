@@ -119,30 +119,29 @@ function initializeReadMore() {
     setupReadMoreToggle('comic-story-toggle', 'comic-story');
 }
 
-function initializeFeaturedCard() {
-    const featuredCard = document.querySelector('.content-grid .card');
-
-    if (featuredCard) {
-        featuredCard.classList.add('is-featured');
-    }
-}
+const HIGHLIGHT_STORAGE_KEY = 'lws-highlight';
 
 function initializeToggleHighlight() {
     const toggleButton = document.querySelector('.toggle-highlight');
-    const featuredCard = document.querySelector('.content-grid .card');
+    const featuredCard = document.querySelector('.content-grid .card, .about-grid .about-card');
 
     if (!toggleButton || !featuredCard) {
         return;
     }
 
-    const isActiveOnLoad = featuredCard.classList.contains('is-featured');
-    toggleButton.setAttribute('aria-pressed', String(isActiveOnLoad));
-    toggleButton.textContent = isActiveOnLoad ? 'Hide highlight' : 'Toggle highlight';
-
-    toggleButton.addEventListener('click', () => {
-        const isActive = featuredCard.classList.toggle('is-featured');
+    const applyState = (isActive) => {
+        featuredCard.classList.toggle('is-featured', isActive);
         toggleButton.setAttribute('aria-pressed', String(isActive));
         toggleButton.textContent = isActive ? 'Hide highlight' : 'Toggle highlight';
+    };
+
+    const savedPreference = localStorage.getItem(HIGHLIGHT_STORAGE_KEY);
+    applyState(savedPreference === null ? true : savedPreference === 'true');
+
+    toggleButton.addEventListener('click', () => {
+        const isActive = !featuredCard.classList.contains('is-featured');
+        applyState(isActive);
+        localStorage.setItem(HIGHLIGHT_STORAGE_KEY, String(isActive));
     });
 }
 
@@ -252,7 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
     initializeNavToggle();
     initializeReadMore();
-    initializeFeaturedCard();
     initializeToggleHighlight();
     initializeBackToTop();
     initializeForms();
