@@ -16,6 +16,11 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 | [Projects](projects.html) | Shares creative work and ideas in progress. | Lemar's Life Story coloring-book concept, future comic-book idea, animation and graphic-design goals, and sources of inspiration. |
 | [About](about.html) | Tells Lemar's story and creative goals. | Creator biography, skills and resume details, quick facts, interests, goals, and a stay-connected form. |
 
+## Design Principles
+
+- **Proximity:** Related content is grouped inside each card and section, so visitors can quickly understand which heading, description, and action belong together.
+- **Similarity:** Shared card borders, spacing, button styles, and the consistent navy-and-gold palette make repeated content types feel connected across all three pages.
+
 ## Features
 
 - Responsive layouts built with CSS Grid and Flexbox for phone, tablet, and desktop screens.
@@ -44,6 +49,8 @@ Accessibility is built into the page structure and shared stylesheet.
 - Form labels, required fields, helpful error-message regions, and appropriate autocomplete/input settings.
 - Keyboard-visible focus indicators and colors selected for WCAG AA contrast.
 - A `prefers-reduced-motion` media query that limits animations and transitions for visitors who request it.
+
+Accessibility fixes documented here include semantic landmarks, one logical `h1` per page with ordered `h2` and `h3` headings, a skip link and visible focus states, descriptive image text, labeled form controls, inline validation messages, keyboard-operable buttons, and contrast-safe text and background colors.
 
 The site has been checked with [WAVE](https://wave.webaim.org/) and achieved 0 errors, 0 contrast errors, and an AIM score of 10/10.
 
