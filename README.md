@@ -14,7 +14,7 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 | --- | --- | --- |
 | [Home](index.html) | Introduces LWS Creations and directs visitors to the rest of the portfolio. | Welcome hero, coloring-book cover image, links to Projects and About, and a quick-message form. |
 | [Projects](projects.html) | Shares creative work and ideas in progress. | Lemar's Life Story coloring-book concept, future comic-book idea, animation and graphic-design goals, and sources of inspiration. |
-| [About](about.html) | Tells Lemar's story and creative goals. | Creator biography, quick facts, interests, goals, and a stay-connected form. |
+| [About](about.html) | Tells Lemar's story and creative goals. | Creator biography, skills and resume details, quick facts, interests, goals, and a stay-connected form. |
 
 ## Features
 
@@ -25,6 +25,7 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 - A "Toggle highlight" button on every page that lets readers turn a featured card's highlight on or off, with the choice remembered across pages.
 - Expandable "Read more" sections on the Home, Projects, and About pages for extra detail without cluttering the page.
 - A featured image for the *Lemar's Life Story* coloring-book project.
+- A Skills & Resume section with core skills, IT education and coursework, and work experience.
 - Contact-style forms on the Home and About pages with inline validation, error messages, and a confirmation state on submit.
 - A GitHub stats lookup and a mood-word color preview on the Home page.
 - A "Back to top" button that appears after scrolling.

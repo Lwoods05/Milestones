@@ -469,6 +469,14 @@ main {
     margin: 1rem auto 0;
 }
 
+.resume-grid {
+    scroll-margin-top: 7rem;
+}
+
+.resume-grid .about-card {
+    height: 100%;
+}
+
 .about-form {
     margin: 0;
 }
