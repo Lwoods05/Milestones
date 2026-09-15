@@ -186,6 +186,8 @@ function validateField(field) {
         errorElement.hidden = isValid;
     }
 
+    field.setAttribute('aria-invalid', String(!isValid));
+
     return isValid;
 }
 
@@ -227,15 +229,16 @@ function initializeForms() {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
 
-            let isFormValid = true;
+            let firstInvalidField = null;
 
             fields.forEach((field) => {
                 if (!validateField(field)) {
-                    isFormValid = false;
+                    firstInvalidField ??= field;
                 }
             });
 
-            if (!isFormValid) {
+            if (firstInvalidField) {
+                firstInvalidField.focus();
                 return;
             }
 
