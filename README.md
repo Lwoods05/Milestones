@@ -13,8 +13,8 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 | Page | Purpose | Highlights |
 | --- | --- | --- |
 | [Home](index.html) | Introduces LWS Creations and directs visitors to the rest of the portfolio. | Welcome hero, coloring-book cover image, links to Projects and About, and a quick-message form. |
-| [Projects](projects.html) | Shares creative work and ideas in progress. | Lemar's Life Story coloring-book concept, future comic-book idea, animation and graphic-design goals, and sources of inspiration. |
-| [About](about.html) | Tells Lemar's story and creative goals. | Creator biography, skills and resume details, quick facts, interests, goals, and a stay-connected form. |
+| [Projects](pages/projects.html) | Shares creative work and ideas in progress. | Lemar's Life Story coloring-book concept, future comic-book idea, animation and graphic-design goals, and sources of inspiration. |
+| [About](pages/about.html) | Tells Lemar's story, work history, and creative goals. | Creator biography, professional summary, work experience, certifications, skills and coursework, quick facts, and a stay-connected form. |
 
 ## Design Principles
 
@@ -30,9 +30,8 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 - A "Toggle highlight" button on every page that lets readers turn a featured card's highlight on or off, with the choice remembered across pages.
 - Expandable "Read more" sections on the Home, Projects, and About pages for extra detail without cluttering the page.
 - A featured image for the *Lemar's Life Story* coloring-book project.
-- A Skills & Resume section with core skills, IT education and coursework, and work experience.
+- A Skills & Resume section with a professional summary, work experience, certifications and licenses, core skills, and IT education and coursework.
 - Contact-style forms on the Home and About pages with inline validation, error messages, and a confirmation state on submit.
-- A GitHub stats lookup and a mood-word color preview on the Home page.
 - A "Back to top" button that appears after scrolling.
 - Google Fonts: [Pacifico](https://fonts.google.com/specimen/Pacifico) for branding and [Quicksand](https://fonts.google.com/specimen/Quicksand) for readable body copy.
 - Focus, hover, and reduced-motion styles that make interaction clearer and more comfortable.
@@ -60,7 +59,7 @@ This is a lightweight static website. It uses:
 
 - HTML5
 - CSS3
-- Vanilla JavaScript (`assets/js/site.js` for shared site behavior, `assets/js/interactive.js` for Home page extras)
+- Vanilla JavaScript (`assets/js/site.js` for shared site behavior)
 - Google Fonts
 - GitHub Pages for deployment
 
@@ -82,9 +81,10 @@ There is no build process, framework, or server-side code required to view the s
 ```text
 Milestones/
 |-- index.html                         # Home page
-|-- projects.html                      # Projects page
-|-- about.html                         # About and contact page
 |-- README.md                          # Project documentation
+|-- pages/
+|   |-- projects.html                  # Projects page
+|   `-- about.html                     # About, resume, and contact page
 `-- assets/
     |-- css/
     |   `-- style.css                   # Shared layout, responsive, and accessibility styles
@@ -94,8 +94,7 @@ Milestones/
     |   |-- Lemars_Life_Story_Cover_Page.png  # Coloring-book cover image
     |   `-- black_super_heroes.jpg      # Comic-inspiration image
     `-- js/
-        |-- site.js                     # Shared behavior: theme toggle, nav, forms, highlight toggle, back-to-top
-        `-- interactive.js               # Home page extras: GitHub stats lookup and mood-word preview
+        `-- site.js                     # Shared behavior: theme toggle, nav, forms, highlight toggle, back-to-top
 ```
 
 ## Deployment

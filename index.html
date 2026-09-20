@@ -30,8 +30,8 @@
             </div>
             <nav class="top-nav" aria-label="Main navigation" aria-hidden="true">
                 <a href="index.html" class="nav-box" aria-current="page">Home</a>
-                <a href="projects.html" class="nav-box">Projects</a>
-                <a href="about.html" class="nav-box">About</a>
+                <a href="pages/projects.html" class="nav-box">Projects</a>
+                <a href="pages/about.html" class="nav-box">About</a>
             </nav>
         </header>
 
@@ -67,7 +67,7 @@
                     <p>
                         I create coloring books, comic ideas, and future design projects that reflect my creativity.
                     </p>
-                    <a class="btn" href="./projects.html">View my projects</a>
+                    <a class="btn" href="./pages/projects.html">View my projects</a>
                 </article>
 
                 <article class="card">
@@ -75,7 +75,7 @@
                     <p>
                         I am passionate about storytelling, creativity, and using my work to inspire others.
                     </p>
-                    <a class="btn" href="./about.html">Read more about me</a>
+                    <a class="btn" href="./pages/about.html">Read more about me</a>
                 </article>
 
                 <article class="card">
@@ -84,7 +84,7 @@
                         My work is inspired by powerful stories, strong communities, and the idea of making a
                         difference.
                     </p>
-                    <a class="btn" href="./about.html#story-heading">Learn about my story</a>
+                    <a class="btn" href="./pages/about.html#story-heading">Learn about my story</a>
                 </article>
             </section>
 
@@ -135,42 +135,13 @@
 
                             <div class="about-actions">
                                 <button type="submit" class="btn">Send message</button>
-                                <a class="btn btn--secondary" href="./projects.html">View my projects</a>
+                                <a class="btn btn--secondary" href="./pages/projects.html">View my projects</a>
                             </div>
                         </fieldset>
                     </form>
                 </article>
             </section>
 
-            <section class="content-grid interactive-panel" aria-labelledby="interactive-heading">
-                <h2 id="interactive-heading">Try the Interactive Playground</h2>
-                <article class="card interactive-card">
-                    <h3>GitHub Profile Spark</h3>
-                    <p>Click to fetch live stats from my GitHub profile using the public GitHub API.</p>
-                    <button type="button" class="btn spark-idea-btn">Get GitHub stats</button>
-                    <p class="spark-idea-output" role="status">Click the button to load my GitHub info!</p>
-                </article>
-
-                <article class="card interactive-card">
-                    <h3>Mood Color Preview</h3>
-                    <label class="about-label" for="mood-input">Type a mood word (calm, bold, playful, creative,
-                        focused)</label>
-                    <input type="text" id="mood-input" class="about-input" placeholder="e.g. calm, bold, playful"
-                        autocomplete="off">
-                    <div class="mood-preview" aria-live="polite">Your mood preview will update here as you type.</div>
-                </article>
-
-                <article class="card interactive-card">
-                    <h3>My Goals List</h3>
-                    <label class="about-label" for="goal-input">Add a creative goal</label>
-                    <div class="goal-form-row">
-                        <input type="text" id="goal-input" class="about-input" placeholder="e.g. Finish a comic page"
-                            autocomplete="off">
-                        <button type="button" class="btn goal-add-btn">Add goal</button>
-                    </div>
-                    <ul class="goal-list" aria-live="polite"></ul>
-                </article>
-            </section>
         </main>
 
         <footer>
@@ -179,7 +150,6 @@
         </footer>
     </div>
     <script src="./assets/js/site.js"></script>
-    <script src="./assets/js/interactive.js"></script>
 </body>
 
 </html>
