@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Learn more about Lemar Woods, his creative journey, and the ideas behind LWS Creations.">
-    <title>About Me | LWS Creations</title>
+        content="Learn more about Lemar Woods: IT education, work experience, technical skills, and creative projects.">
+    <title>About Me | Lemar Woods</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;700&display=swap"
@@ -20,7 +20,10 @@
     <div class="page">
         <header class="site-header">
             <div class="header-row">
-                <span class="site-brand">LWS Creations</span>
+                <a class="site-brand" href="../index.html">
+                    Lemar Woods
+                    <span class="site-brand__subtitle">IT Support &amp; Technical Professional</span>
+                </a>
                 <div class="header-actions">
                     <button class="theme-toggle" type="button" aria-label="Switch to dark mode"
                         aria-pressed="false">🌙</button>
@@ -32,21 +35,30 @@
                 <a href="../index.html" class="nav-box">Home</a>
                 <a href="./projects.html" class="nav-box">Projects</a>
                 <a href="./about.html" class="nav-box" aria-current="page">About</a>
+                <a href="../assets/documents/Lemar-Woods-Resume.pdf" class="nav-box" target="_blank"
+                    rel="noopener noreferrer">Resume</a>
             </nav>
         </header>
         <main id="main-content">
             <section class="about-hero" aria-labelledby="main-content-title">
                 <div class="about-hero__content">
-                    <p class="tagline">Creative storyteller and future creator</p>
+                    <p class="tagline">IT Support &amp; Technical Professional</p>
                     <h1 id="main-content-title" tabindex="-1">Hi, I’m Lemar Woods</h1>
                     <p>
-                        My name is Lemar Woods, and I am a young creator who loves building projects that combine art,
-                        storytelling, and technology. I enjoy creating coloring books,
+                        I'm a full-time student pursuing an Associate of Applied Science in Information Technology in
+                        Chicago, IL, with real-world experience in customer service, technical troubleshooting, and
+                        equipment maintenance.
                     </p>
                     <p>
-                        My work reflects my love for creativity, community, and building something that can make a
-                        positive impact.
+                        I'm focused, hardworking, and looking to grow into IT support and technical roles, while
+                        continuing to build creative projects in my own time.
                     </p>
+
+                    <div class="hero-actions">
+                        <a class="btn" href="../assets/documents/Lemar-Woods-Resume.pdf" target="_blank"
+                            rel="noopener noreferrer">Download my resume</a>
+                        <a class="btn btn--secondary" href="mailto:Lemarws@gmail.com">Email me</a>
+                    </div>
 
                     <button class="toggle-highlight" type="button" aria-pressed="false">Toggle highlight</button>
                 </div>
@@ -54,9 +66,9 @@
                 <div class="about-card about-card--accent">
                     <h2>Quick Facts</h2>
                     <ul class="about-list">
-                        <li>Interested in art, comics, and technology</li>
-                        <li>Inspired by superheroes and community</li>
-                        <li>Enjoys creating projects that tell a story</li>
+                        <li>Pursuing an Associate of Applied Science in Information Technology</li>
+                        <li>Experienced in customer service and technical troubleshooting</li>
+                        <li>Also interested in art, comics, and creative technology</li>
                     </ul>
                     <button id="about-facts-toggle" class="read-more-toggle" type="button" aria-expanded="false">Read
                         more</button>
@@ -211,6 +223,16 @@
             <section class="about-grid" aria-labelledby="connect-section-heading">
                 <h2 id="connect-section-heading">Get in Touch</h2>
                 <article class="about-card">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-links">
+                        <li><a class="btn btn--secondary" href="mailto:Lemarws@gmail.com">Email</a></li>
+                        <li><a class="btn btn--secondary" href="https://www.linkedin.com/in/lemar-woods-589570196"
+                                target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a class="btn btn--secondary" href="https://github.com/Lwoods05" target="_blank"
+                                rel="noopener noreferrer">GitHub</a></li>
+                    </ul>
+                </article>
+                <article class="about-card">
                     <form class="about-form" action="#" method="post" novalidate>
                         <fieldset class="about-fieldset">
                             <legend>Stay Connected</legend>
@@ -259,7 +281,13 @@
         </main>
 
         <footer>
-            <p>&copy; <span id="current-year"></span> LWS Creations | Created by Lemar Woods</p>
+            <ul class="footer-contact">
+                <li><a href="mailto:Lemarws@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/lemar-woods-589570196" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/Lwoods05" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <p>&copy; <span id="current-year"></span> Lemar Woods</p>
             <button class="back-to-top" type="button" aria-label="Back to top" hidden>Back to top ↑</button>
         </footer>
     </div>

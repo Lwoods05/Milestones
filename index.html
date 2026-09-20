@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="LWS Creations is a creative portfolio showcasing projects, stories, and goals by Lemar Woods.">
-    <title>Home | LWS Creations</title>
+        content="Lemar Woods is an Information Technology student and technical professional with hands-on experience in troubleshooting, customer service, and creative project work.">
+    <title>Home | Lemar Woods</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;700&display=swap"
@@ -20,7 +20,10 @@
     <div class="page">
         <header class="site-header">
             <div class="header-row">
-                <span class="site-brand">LWS Creations</span>
+                <a class="site-brand" href="index.html">
+                    Lemar Woods
+                    <span class="site-brand__subtitle">IT Support &amp; Technical Professional</span>
+                </a>
                 <div class="header-actions">
                     <button class="theme-toggle" type="button" aria-label="Switch to dark mode"
                         aria-pressed="false">🌙</button>
@@ -32,25 +35,34 @@
                 <a href="index.html" class="nav-box" aria-current="page">Home</a>
                 <a href="pages/projects.html" class="nav-box">Projects</a>
                 <a href="pages/about.html" class="nav-box">About</a>
+                <a href="./assets/documents/Lemar-Woods-Resume.pdf" class="nav-box" target="_blank"
+                    rel="noopener noreferrer">Resume</a>
             </nav>
         </header>
 
         <main id="main-content">
             <section class="hero" aria-labelledby="main-content-title">
                 <div class="hero-content">
-                    <p class="tagline">Creative stories, coloring books, and comic ideas</p>
-                    <h1 id="main-content-title" tabindex="-1">Welcome to my creative world</h1>
+                    <p class="tagline">IT Support &amp; Technical Professional</p>
+                    <h1 id="main-content-title" tabindex="-1">Hi, I'm Lemar Woods</h1>
                     <p>
-                        I am Lemar Woods, a young creator who loves building projects around art, storytelling,
-                        and technology. This site is a place to share my journey and the ideas that inspire me.
+                        I'm an Information Technology student in Chicago with hands-on experience in customer
+                        service, technical troubleshooting, and equipment maintenance. I'm looking to grow into
+                        IT support and technical roles, and I build creative projects on the side.
                     </p>
                     <button id="home-story-toggle" class="read-more-toggle" type="button" aria-expanded="false">Read
                         more</button>
                     <div id="home-story" class="read-more-content" hidden>
                         <p>
-                            My work is driven by curiosity, community, and the belief that creativity can become a
-                            meaningful path for growth, purpose, and connection.
+                            I'm focused, dependable, and quick to learn new tools and systems. I care about clear
+                            communication, solving problems methodically, and following through until the job is
+                            done right.
                         </p>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="btn" href="./assets/documents/Lemar-Woods-Resume.pdf" target="_blank"
+                            rel="noopener noreferrer">View my resume</a>
+                        <a class="btn btn--secondary" href="mailto:Lemarws@gmail.com">Contact me</a>
                     </div>
                     <button class="toggle-highlight" type="button" aria-pressed="false">Toggle highlight</button>
 
@@ -63,9 +75,19 @@
             <section class="content-grid" aria-labelledby="explore-heading">
                 <h2 id="explore-heading">Explore My Work</h2>
                 <article class="card">
-                    <h3>My Projects</h3>
+                    <h3>Work Experience &amp; Skills</h3>
                     <p>
-                        I create coloring books, comic ideas, and future design projects that reflect my creativity.
+                        Customer service, technical troubleshooting, and hands-on IT skills built through real work
+                        experience and coursework.
+                    </p>
+                    <a class="btn" href="./pages/about.html#skills-resume">View my resume details</a>
+                </article>
+
+                <article class="card">
+                    <h3>Creative Projects</h3>
+                    <p>
+                        Coloring books, comic ideas, and design projects I build in my own time to keep growing my
+                        creative skills.
                     </p>
                     <a class="btn" href="./pages/projects.html">View my projects</a>
                 </article>
@@ -73,23 +95,22 @@
                 <article class="card">
                     <h3>About Me</h3>
                     <p>
-                        I am passionate about storytelling, creativity, and using my work to inspire others.
+                        Learn more about my background, education, and what drives me both professionally and
+                        creatively.
                     </p>
                     <a class="btn" href="./pages/about.html">Read more about me</a>
-                </article>
-
-                <article class="card">
-                    <h3>Inspiration</h3>
-                    <p>
-                        My work is inspired by powerful stories, strong communities, and the idea of making a
-                        difference.
-                    </p>
-                    <a class="btn" href="./pages/about.html#story-heading">Learn about my story</a>
                 </article>
             </section>
 
             <section class="content-grid home-connect" aria-labelledby="connect-heading">
                 <h2 id="connect-heading">Stay Connected</h2>
+                <ul class="contact-links">
+                    <li><a class="btn btn--secondary" href="mailto:Lemarws@gmail.com">Email</a></li>
+                    <li><a class="btn btn--secondary" href="https://www.linkedin.com/in/lemar-woods-589570196"
+                            target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a class="btn btn--secondary" href="https://github.com/Lwoods05" target="_blank"
+                            rel="noopener noreferrer">GitHub</a></li>
+                </ul>
                 <article class="card home-connect__card">
                     <form class="about-form" action="#" method="post" novalidate>
                         <fieldset class="about-fieldset">
@@ -145,7 +166,13 @@
         </main>
 
         <footer>
-            <p>&copy; <span id="current-year"></span> LWS Creations | Created by Lemar Woods</p>
+            <ul class="footer-contact">
+                <li><a href="mailto:Lemarws@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/lemar-woods-589570196" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/Lwoods05" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <p>&copy; <span id="current-year"></span> Lemar Woods</p>
             <button class="back-to-top" type="button" aria-label="Back to top" hidden>Back to top ↑</button>
         </footer>
     </div>

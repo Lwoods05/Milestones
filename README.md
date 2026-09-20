@@ -1,20 +1,20 @@
-# LWS Creations: Milestones Portfolio
+# Lemar Woods: Portfolio Website
 
-LWS Creations is a responsive, three-page portfolio website created by **Lemar Woods**. It presents a growing body of creative work centered on art, storytelling, coloring books, comic ideas, community, and technology.
+A responsive, three-page portfolio website for **Lemar Woods**, an Information Technology student and technical professional. It presents his resume, work experience, technical skills, and creative projects to potential employers.
 
 **Live site:** [lwoods05.github.io/Milestones](https://lwoods05.github.io/Milestones/)
 
 ## Website Overview
 
-The site gives visitors an introduction to Lemar's creative journey, highlights current and planned projects, and provides places for visitors to share what interests them. Its navy, gold, and white visual system is paired with friendly display and body typefaces to make the portfolio feel personal while remaining easy to scan.
+The site introduces Lemar's professional background, IT education, and work history, while also highlighting creative projects he builds in his own time. Visitors can download his resume and reach him directly by email, LinkedIn, or GitHub. Its navy, gold, and white visual system is paired with friendly display and body typefaces to make the portfolio feel personal while remaining easy to scan.
 
 ## Pages
 
 | Page | Purpose | Highlights |
 | --- | --- | --- |
-| [Home](index.html) | Introduces LWS Creations and directs visitors to the rest of the portfolio. | Welcome hero, coloring-book cover image, links to Projects and About, and a quick-message form. |
+| [Home](index.html) | Introduces Lemar and directs visitors to his resume, projects, and about page. | Professional summary, resume download and email CTAs, links to Projects and About, and a quick-message form. |
 | [Projects](pages/projects.html) | Shares creative work and ideas in progress. | Lemar's Life Story coloring-book concept, future comic-book idea, animation and graphic-design goals, and sources of inspiration. |
-| [About](pages/about.html) | Tells Lemar's story, work history, and creative goals. | Creator biography, professional summary, work experience, certifications, skills and coursework, quick facts, and a stay-connected form. |
+| [About](pages/about.html) | Tells Lemar's story, education, work history, and creative goals. | Professional summary, work experience, certifications, core skills, coursework, contact links, and a stay-connected form. |
 
 ## Design Principles
 
@@ -30,6 +30,8 @@ The site gives visitors an introduction to Lemar's creative journey, highlights 
 - A "Toggle highlight" button on every page that lets readers turn a featured card's highlight on or off, with the choice remembered across pages.
 - Expandable "Read more" sections on the Home, Projects, and About pages for extra detail without cluttering the page.
 - A featured image for the *Lemar's Life Story* coloring-book project.
+- A downloadable resume (PDF) linked from the navigation and hero sections.
+- Direct contact links (email, LinkedIn, GitHub) in the footer and contact sections of every page.
 - A Skills & Resume section with a professional summary, work experience, certifications and licenses, core skills, and IT education and coursework.
 - Contact-style forms on the Home and About pages with inline validation, error messages, and a confirmation state on submit.
 - A "Back to top" button that appears after scrolling.
@@ -90,6 +92,8 @@ Milestones/
     |   `-- style.css                   # Shared layout, responsive, and accessibility styles
     |-- data/
     |   `-- idea-prompts.json           # Supporting content data
+    |-- documents/
+    |   `-- Lemar-Woods-Resume.pdf      # Downloadable resume
     |-- images/
     |   |-- Lemars_Life_Story_Cover_Page.png  # Coloring-book cover image
     |   `-- black_super_heroes.jpg      # Comic-inspiration image
